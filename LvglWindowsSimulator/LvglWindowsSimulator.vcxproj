@@ -4234,6 +4234,8 @@
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_events.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_cfg.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_form.c" />
+    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_sd.c" />
+    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_i18n.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_mainScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_splashScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_generalScreen.c" />

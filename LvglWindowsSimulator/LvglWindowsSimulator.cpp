@@ -34,9 +34,10 @@ static int s_idx = 0;
 static void apply_scenario(int i)
 {
     const scenario_t *s = &s_scen[i];
-    sensor_sample_t last = { 0, s->pressure_kpa, s->flow_lpm };
-    sensor_sample_t mn   = { 0, s->pressure_kpa * 0.92f, s->flow_lpm * 0.85f };
-    sensor_sample_t mx   = { 0, s->pressure_kpa * 1.05f, s->flow_lpm * 1.12f };
+    int64_t now_ms = (int64_t)lv_tick_get();   /* ts real: el consumo integra el dt */
+    sensor_sample_t last = { now_ms, s->pressure_kpa, s->flow_lpm };
+    sensor_sample_t mn   = { now_ms, s->pressure_kpa * 0.92f, s->flow_lpm * 0.85f };
+    sensor_sample_t mx   = { now_ms, s->pressure_kpa * 1.05f, s->flow_lpm * 1.12f };
     ui_main_update(&last, true, &mn, &mx, true, appcfg_cache_peek(), s->state, s->muted);
     ui_main_set_clock("14:32");
 }

@@ -1,6 +1,7 @@
 /* Backend simulado para el preview de PC.
  * Provee un AppConfig de ejemplo y stubs de las funciones ESP que la HMI llama. */
 #include "storage.h"
+#include "metrics_store.h"
 #include "alarm_mgr.h"
 #include "ui_statusbar_controller.h"
 #include <string.h>
@@ -17,7 +18,11 @@ static void ensure_cfg(void)
     strcpy(s_cfg.general.client,    "Medidor de gases " "\xC2\xB7" " UCI Torre A"); /* · */
     strcpy(s_cfg.general.model,     "MPF-4200");
     strcpy(s_cfg.general.serial,    "AX-4200-01847");
+    strcpy(s_cfg.general.hw_version, "1.1");
+    strcpy(s_cfg.general.fw_version, "1.8.0");
     strcpy(s_cfg.general.lang,      "es");
+    strcpy(s_cfg.general.timezone,  "America/Bogota");
+    s_cfg.general.brightness = 80;
     strcpy(s_cfg.general.admin.pass, "1234");
     strcpy(s_cfg.general.admin.user, "admin");
 
@@ -25,6 +30,9 @@ static void ensure_cfg(void)
     strcpy(s_cfg.sensors.flow_unit,     "lpm");
     strcpy(s_cfg.sensors.gas_type,      "o2");
     strcpy(s_cfg.sensors.color_code,    "nfpa");
+    s_cfg.sensors.flow_fullscale_lpm = 100.0f;
+    strcpy(s_cfg.sensors.cal.last_cal_date,     "12 mar 2026");
+    strcpy(s_cfg.sensors.cal.next_service_date, "08 sep 2026");
 
     /* Límites en kPa (mundo coherente con pressure_kpa que inyecta el main):
        500 psi = 3447 kPa ; 2000 psi = 13790 kPa */
@@ -49,6 +57,14 @@ static void ensure_cfg(void)
     s_cfg.bt.enabled = true;
     s_cfg.bt.advertise = true;
     s_cfg.bt.tx_power = ALTO;
+    s_cfg.bt.mesh.enabled = false;
+    s_cfg.bt.mesh.provisioned = false;
+    s_cfg.bt.mesh.ttl = 5;
+    s_cfg.bt.mesh.relay = false;
+    strcpy(s_cfg.bt.mesh.net_key, "00112233445566778899AABBCCDDEEFF");
+    strcpy(s_cfg.bt.mesh.app_key, "FFEEDDCCBBAA99887766554433221100");
+    strcpy(s_cfg.bt.mesh.dev_uuid, "123e4567-e89b-12d3-a456-426614174000");
+    s_cfg.bt.mesh.unicast_addr = 0x0002;
     strcpy(s_cfg.bt.legacy.name, "MPF-4200-1847");
     strcpy(s_cfg.bt.legacy.pin, "0000");
     s_cfg.bt.legacy.sec_mode = APP_BT_SEC_PASSKEY;
@@ -71,6 +87,9 @@ AppConfig *appcfg_cache_peek(void)
 
 /* En el sim no hay NVS: el AppConfig vive en RAM y ya quedó modificado vía peek. */
 int appcfg_save(const AppConfig *in) { (void)in; return 0; }
+
+/* metrics_store stub: 184 días de servicio de demo */
+uint32_t appmetrics_service_min(void) { return 184u * 1440u; }
 
 /* ---- stubs sin efecto (la HMI los llama pero en el sim no hacen nada) ---- */
 void alarm_mgr_press_mute(void) {}

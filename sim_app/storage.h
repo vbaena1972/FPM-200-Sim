@@ -20,7 +20,11 @@ typedef struct {
         char client[64];
         char model[16];
         char serial[24];
+        char hw_version[16];
+        char fw_version[16];
         char lang[3];
+        char timezone[32];   /* IANA, p.ej. "America/Bogota" */
+        int brightness;      /* 10..100 (%) */
         struct { char user[16]; char pass[16]; } admin;
     } general;
 
@@ -29,6 +33,11 @@ typedef struct {
         char flow_unit[8];       /* "lpm"|"sccm"|... */
         char gas_type[16];       /* "o2"|"air_med"|"n2o"|"vac" */
         char color_code[8];
+        float flow_fullscale_lpm;
+        struct {
+            char last_cal_date[16];
+            char next_service_date[16];
+        } cal;
         struct {
             float pressure_min, pressure_max;
             float flow_delta_threshold;
@@ -52,6 +61,16 @@ typedef struct {
         bool enabled;
         bool advertise;
         app_bt_tx_power_t tx_power;
+        struct {
+            bool enabled;
+            bool provisioned;
+            uint8_t ttl;
+            bool relay;
+            char net_key[64];
+            char app_key[64];
+            char dev_uuid[40];
+            uint16_t unicast_addr;
+        } mesh;
         struct { char name[24]; char pin[8]; app_bt_sec_mode_t sec_mode; } legacy;
     } bt;
 

@@ -4232,6 +4232,8 @@
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_widgets.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_nav.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_events.c" />
+    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_cfg.c" />
+    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_form.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_mainScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_splashScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_generalScreen.c" />
@@ -4244,6 +4246,10 @@
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_confirmScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_pinScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_bleAppScreen.c" />
+    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_netWifiScreen.c" />
+    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_netEthScreen.c" />
+    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_netCloudScreen.c" />
+    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_netBleScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\fonts\mg_font_12.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\fonts\mg_font_14.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\fonts\mg_font_18.c" />

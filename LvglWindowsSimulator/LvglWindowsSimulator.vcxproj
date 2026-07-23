@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}</ProjectGuid>
@@ -10,7 +10,7 @@
     <MileProjectCompanyName>LVGL</MileProjectCompanyName>
     <MileProjectFileDescription>LVGL Windows Simulator</MileProjectFileDescription>
     <MileProjectInternalName>LvglWindowsSimulator</MileProjectInternalName>
-    <MileProjectLegalCopyright>© LVGL. All rights reserved.</MileProjectLegalCopyright>
+    <MileProjectLegalCopyright>Â© LVGL. All rights reserved.</MileProjectLegalCopyright>
     <MileProjectOriginalFilename>LvglWindowsSimulator.exe</MileProjectOriginalFilename>
     <MileProjectProductName>LVGL</MileProjectProductName>
     <MileProjectVersion>9.0.0.0</MileProjectVersion>
@@ -4239,6 +4239,7 @@
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_mainScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_splashScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_generalScreen.c" />
+    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_datetimeScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_infoScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_generalSimpleScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_connectivityScreen.c" />
@@ -4247,6 +4248,7 @@
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_keypadScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_confirmScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_pinScreen.c" />
+    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_loginScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_bleAppScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_netWifiScreen.c" />
     <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_netEthScreen.c" />

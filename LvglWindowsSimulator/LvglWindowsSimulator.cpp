@@ -24,10 +24,10 @@ typedef struct {
 } scenario_t;
 
 static const scenario_t s_scen[] = {
-    { "NORMAL",              9653.0f, 59.0f, ALARM_STATE_NORMAL,  false },
-    { "ADVERTENCIA (flujo)", 9515.0f, 86.0f, ALARM_STATE_WARNING, false },
-    { "ALARMA (presion baja)", 2896.0f, 44.0f, ALARM_STATE_ALERT, false },
-    { "ALARMA SILENCIADA",   2896.0f, 44.0f, ALARM_STATE_ALERT,   true  },
+    { "NORMAL",                965.3f, 59.0f, ALARM_STATE_NORMAL,  false },
+    { "ADVERTENCIA (flujo)",   951.5f, 86.0f, ALARM_STATE_WARNING, false },
+    { "ALARMA (presion baja)", 289.6f, 44.0f, ALARM_STATE_ALERT, false },
+    { "ALARMA SILENCIADA",     289.6f, 44.0f, ALARM_STATE_ALERT,   true  },
 };
 static int s_idx = 0;
 
@@ -40,6 +40,7 @@ static void apply_scenario(int i)
     sensor_sample_t mx   = { now_ms, s->pressure_kpa * 1.05f, s->flow_lpm * 1.12f };
     ui_main_update(&last, true, &mn, &mx, true, appcfg_cache_peek(), s->state, s->muted);
     ui_main_set_clock("14:32");
+    ui_main_set_date("22/07/2026");
 }
 
 static void scenario_timer_cb(lv_timer_t *t)

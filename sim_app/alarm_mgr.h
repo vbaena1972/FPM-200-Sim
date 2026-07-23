@@ -3,6 +3,7 @@
 #define SIM_ALARM_MGR_H
 
 #include <stdbool.h>
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -15,6 +16,8 @@ typedef enum {
 } alarm_clinical_state_t;
 
 void alarm_mgr_press_mute(void);
+void alarm_mgr_test_buzzer(void);
+uint32_t alarm_mgr_get_sensor_faults(void);
 
 #ifdef __cplusplus
 }

@@ -36,7 +36,7 @@
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>LV_CONF_INCLUDE_SIMPLE;LV_LVGL_H_INCLUDE_SIMPLE;LV_USE_DEV_VERSION;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Optimization Condition="'$(Configuration)'=='Release'">MinSpace</Optimization>
-      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\sim_app;$(MSBuildThisFileDirectory)..\..\ClaudeHMI-FW\main\ui;$(MSBuildThisFileDirectory)..\..\ClaudeHMI-FW\main\ui\screens;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\sim_app;$(MSBuildThisFileDirectory)..\..\FPM-200\main\ui;$(MSBuildThisFileDirectory)..\..\FPM-200\main\ui\screens;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -4227,42 +4227,42 @@
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
-    <!-- ===== HMI Axira / Claude Design (fuentes reales de ClaudeHMI-FW, sin copiar) ===== -->
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_widgets.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_nav.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_events.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_cfg.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_form.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_sd.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\ui_i18n.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_mainScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_splashScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_generalScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_datetimeScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_infoScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_generalSimpleScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_connectivityScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_sensorEditScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_sensorDiagScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_keypadScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_confirmScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_pinScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_loginScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_bleAppScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_netWifiScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_netEthScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_netCloudScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\screens\ui_netBleScreen.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\fonts\mg_font_12.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\fonts\mg_font_14.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\fonts\mg_font_18.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\fonts\mg_font_22.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\fonts\mg_font_36.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\fonts\mg_num_48.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\fonts\ui_font_tabler16.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\fonts\ui_font_tabler20.c" />
-    <ClCompile Include="..\..\ClaudeHMI-FW\main\ui\fonts\ui_font_tabler28.c" />
+    <!-- ===== HMI Axira / Claude Design (fuentes reales de FPM-200, sin copiar) ===== -->
+    <ClCompile Include="..\..\FPM-200\main\ui\ui.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\ui_widgets.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\ui_nav.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\ui_events.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\ui_cfg.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\ui_form.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\ui_sd.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\ui_i18n.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_mainScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_splashScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_generalScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_datetimeScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_infoScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_generalSimpleScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_connectivityScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_sensorEditScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_sensorDiagScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_keypadScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_confirmScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_pinScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_loginScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_bleAppScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_netWifiScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_netEthScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_netCloudScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\screens\ui_netBleScreen.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\fonts\mg_font_12.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\fonts\mg_font_14.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\fonts\mg_font_18.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\fonts\mg_font_22.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\fonts\mg_font_36.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\fonts\mg_num_48.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\fonts\ui_font_tabler16.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\fonts\ui_font_tabler20.c" />
+    <ClCompile Include="..\..\FPM-200\main\ui\fonts\ui_font_tabler28.c" />
     <ClCompile Include="..\sim_app\sim_backend.c" />
     <ClCompile Include="LvglWindowsSimulator.cpp" />
   </ItemGroup>

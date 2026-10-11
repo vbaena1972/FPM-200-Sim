@@ -4258,6 +4258,7 @@
     <ClCompile Include="..\..\firmware\main\ui\fonts\mg_font_14.c" />
     <ClCompile Include="..\..\firmware\main\ui\fonts\mg_font_18.c" />
     <ClCompile Include="..\..\firmware\main\ui\fonts\mg_font_22.c" />
+    <ClCompile Include="..\..\firmware\main\ui\fonts\mg_font_28.c" />
     <ClCompile Include="..\..\firmware\main\ui\fonts\mg_font_36.c" />
     <ClCompile Include="..\..\firmware\main\ui\fonts\mg_num_48.c" />
     <ClCompile Include="..\..\firmware\main\ui\fonts\ui_font_tabler16.c" />
